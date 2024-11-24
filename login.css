@@ -1,0 +1,12 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    margin: 2em   ;
+}
+.formulario{
+    display: flex;
+    flex-direction: column;
+}
+.texto-titulo{
+    text-align: center;
+}
