@@ -1,22 +1,117 @@
-.containerData{
-    display: flex;
-    flex-direction: column;
-    margin: 2em ;
-    
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 'loto', sans-serif;
 }
-.organizar{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 2em;
-    gap: 2em;
+
+.conteudo{
+    left: 50%;
+    margin: 0 0 0 0;
+    width: 500px;
+    background: #f9f9f9; 
 }
-.textoCalendario{
+.calendario{
     text-align: center;
+
 }
-.buttonsConfig{
-    width: 100%;
-    height: 1em;
-    padding: 1em;
+.conteudo .calendario header{
+    position: relative;
+}
+body{
+    background: #f1f1f1;
     
+}
+
+h2{
+    margin-top: 20px;
+    font-size: 32px;
+    text-transform: uppercase;
+}
+.btn-ant , .btn-pro{
+    position: absolute;
+    top: 50%;
+    height: 32px;
+    width: 32px;
+    line-height: 32px;
+    margin-top: -16px;
+    border: 2px solid #cbd1d2;
+    border-radius: 50%;
+    color:#cbd1d2;
+    font-size: 16px;
+    font-weight: bold;
+
+}
+.btn-ant{
+    left: 80px;
+}
+.btn-pro{
+    right: 80px;
+}
+.btn-ant:hover , .btn-pro:hover{
+    background: #cbd1d2;
+    color:#f9f9f9;
+}
+.calendario table{
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+.calendario thead{
+    background: white;
+    font-weight:600 ;
+    text-transform: uppercase;
+    border-bottom: 2x solid red;
+   
+}
+.calendario thead td{
+    height: 64.9px;
+   
+}
+
+.calendario td{
+    border: 1px solid #cbd1d2;
+    height: 71.4px;
+    text-align:center ;
+    width: 71.4px;
+}
+
+.calendario tbody td{
+    cursor: pointer;
+}
+.calendario tbody td:hover{
+    background: rgba(0, 173, 223, 0.8);
+    color: #f9f9f9;
+
+}
+.calendario tbody .dia-atual{
+    background-color: #00addf;
+    color: #f9f9f9;
+
+}
+.calendario .anterior-mes, .calendario .proximo-mes{
+    color: #cbd1d2;
+}
+.calendario .anterior-mes:hover, .calendario .proximo-mes:hover{
+    background: #98a0a0 ;
+}
+.event{
+    position: relative;
+}
+.event:after{
+    content: '';
+    width: 7px;
+    height: 7px;
+    left: 50%;
+    bottom: 7px;
+    margin: -3.5px 0 0 -3.5px;
+    background: #00addf;
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+}
+.event:hover ::after{
+    background: #f9f9f9;
+
+}
+.event.dia-atual::after{
+    background: #f9f9f9;
 }
